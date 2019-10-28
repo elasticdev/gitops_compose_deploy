@@ -208,9 +208,9 @@ class FastestDockerCI(Resource):
 
         payload = self._get_payload_fields()
 
-        if msg is not True: 
-            print msg
-            return {"msg":msg}
+        if payload.get("msg"): 
+            print payload["msg"]
+            return {"msg":payload["msg"]}
 
         print "payload checked out ok"
      
